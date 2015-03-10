@@ -39,6 +39,8 @@ httplib.HTTPSConnection = HTTPSConnection
 
 while 1:
     br=mechanize.Browser()
+    br.set_handle_robots(False)
+    br.set_handle_equiv(False)
     br.open("http://results.vtu.ac.in/") #Open URL
     br.select_form(nr=0) #Select first form
     br['rid']='1MV13CS198' #Enter the value to be entered into the form field
